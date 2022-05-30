@@ -402,7 +402,7 @@ open class YNDropDownMenu: UIView, YNDropDownDelegate {
         case .disabled:
             dropDownButtons?[index].buttonLabel.textColor = self.buttonlabelFontColors?.disabled
             dropDownButtons?[index].buttonLabel.font = self.buttonlabelFonts?.disabled
-            dropDownButtons?[index].isUserInteractionEnabled = false
+            dropDownButtons?[index].isUserInteractionEnabled = true
         }
     }
     
