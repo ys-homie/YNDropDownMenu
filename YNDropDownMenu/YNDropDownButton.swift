@@ -73,7 +73,7 @@ class YNDropDownButton: UIButton {
         if let _font = labelFonts?.disabled {
             self.buttonLabel.font = _font
         }
-        self.isUserInteractionEnabled = false
+        self.isUserInteractionEnabled = true
     }
     
     private func initFontColor() {
