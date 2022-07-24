@@ -22,7 +22,11 @@ public enum YNStatus {
 
 /// Main Class for YNDropDownMenu
 open class YNDropDownMenu: UIView, YNDropDownDelegate {
-    internal var opened: Bool = false
+    internal var opened: Bool = false {
+        didSet {
+            NotificationCenter.default.post(name: NSNotification.Name(rawValue: "menuViewClick"), object: opened)
+        }
+    }
     internal var openedIndex: Int = 0
     
     internal var dropDownButtons: [YNDropDownButton]?
